@@ -1,0 +1,82 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+//Customing
+@mixin flexCenter ($direction){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: $direction;
+}
+
+.welcomeTitle{
+    @include flexCenter(column);
+}
+
+.welcomeBg {
+    background-image: url('/images/bg-beach1.jpg');
+    background-size: cover;
+}
+
+.cardBlur{
+    background-color: rgba($color: #ffffff, $alpha: 0.2);
+    backdrop-filter: blur(8px);
+    border-radius: 5px;
+    box-shadow: 0 25px 25px rgba(129, 124, 124, 0.2);
+}
+
+.leftSide{
+    @include flexCenter(row);
+    background-color: #8aecff;
+}
+
+.rightSide{
+    @include flexCenter(column);
+    background-image: url('/images/bg-beach1.jpg');
+    background-size: cover;
+    background-position: right;
+}
+
+.blogList{
+    background-color: rgba($color: #ffffff, $alpha: 0.3);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+    width: 85%;
+    box-shadow: 0 4px 8px 0 rgba(129, 124, 124, 0.2);
+    &:hover{
+        transition: all 0.3s;
+        background-color: rgba($color: #b1f2ff, $alpha: 0.5);
+        transform: translateY(-0.25em);
+    }
+    a {
+        color: black;
+        text-decoration: none;
+    }
+}
+
+.no-scrollbar {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    
+}
+
+.bg-biru{
+    top: 0;
+    background-color: #b1f2ff;
+    height: 100vh;
+    @media (max-width: 768px) {
+        height: auto;
+    }
+}

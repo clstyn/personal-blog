@@ -17,7 +17,7 @@
                 <div class="overflow-auto w-100 no-scrollbar my-5 p-3">
                     @forelse($posts as $post)
                         <ul class='list-unstyled align-self-start blogList p-2 mx-sm-4'>
-                            <li><a href="./blog/{{ $post->id }}">{{ ucfirst($post->title) }}</a></li>
+                            <li class="blogTitle"><a href="./blog/{{ $post->id }}">{{ ucfirst($post->title) }}</a></li>
                             <hr class="my-1">
                             <!-- truncation -->
                             <p class="mb-0">{{ truncate($post->body) }}</p>

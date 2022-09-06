@@ -18,6 +18,9 @@
                     @forelse($posts as $post)
                         <ul class='list-unstyled align-self-start blogList p-2 mx-sm-4'>
                             <li><a href="./blog/{{ $post->id }}">{{ ucfirst($post->title) }}</a></li>
+                            <hr class="my-1">
+                            <!-- truncation -->
+                            <p class="mb-0">{{ truncate($post->body) }}</p>
                         </ul>
                     @empty
                         <p class="text-warning">No blog Posts available</p>
